@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>koyoarai, loading</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        let refresh = UIRefreshControl()
+        refresh.attributedTitle = NSAttributedString(string: "Loading...") // Loading中に表示する文字を決める
+        
+        //scrolViewのrefreshControlにrefreshを設定
+        
+refresh.addTarget(self, action: #selector(&lt;#ViewController#&gt;.pullToRefresh(sender:)), for: .valueChanged)
+        
+&lt;#TableView#&gt;.addSubview(refresh)
+        
+        /*
+         // 何を更新するのかを定義
+         @objc func pullToRefresh(sender: UIRefreshControl){
+         
+         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+         self.&lt;#myTableView#&gt;.reloadData() // tableView自身を再読み込み
+         sender.endRefreshing() // データが取れたら更新を終える（くるくる回るViewを消去）
+         
+         })
+         }
+         */</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>73A2E205-E716-4C5E-8B2F-B5E7C2B581DE</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>TableViewにてLoading</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Loading... </string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

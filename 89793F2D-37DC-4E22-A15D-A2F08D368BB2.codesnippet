@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>koyoarai, tableviewelement</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    // MARK: テーブルビューのセルの数を設定する (必須)
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+        return self.myItems.count
+    }
+    
+    // MARK: テーブルビューのセルの中身を設定する (必須)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
+
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: "cell")
+
+        cell.textLabel?.text = "a"
+        cell.detailTextLabel?.text = "b"
+        return cell
+    }
+    // MARK: Cellの高さ
+    func tableView(_ table: UITableView,
+                   heightForRowAt indexPath: IndexPath) -&gt; CGFloat {
+        return 80.0
+    }
+    
+    // MARK: テーブルビューのセルが押されたら呼ばれる
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Selected! \(myItems[indexPath.row])")
+    }
+    
+    // セクション数
+    public func numberOfSections(in tableView: UITableView) -&gt; Int {
+        return 1
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>89793F2D-37DC-4E22-A15D-A2F08D368BB2</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>tableviewに必要なfunction</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>TableView Element</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
